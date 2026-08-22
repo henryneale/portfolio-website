@@ -209,6 +209,17 @@ header {
   width: 100%;
 }
 
+.exp-cards {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .exp-cards {
+    text-align: left;
+  }
+}
+
 .text-secondary {
   color: #1a87ee;
 }
@@ -238,7 +249,8 @@ main .icons a:hover {
 }
 
 .bio,
-.jobs {
+.jobs,
+.schools {
   display: flex;
   flex-direction: column;
 }
@@ -247,15 +259,23 @@ main .icons a:hover {
   column-gap: 3rem;
 }
 
-.jobs {
-  column-gap: 8px;
+.jobs,
+.schools {
   row-gap: 2rem;
+}
+
+@media (min-width: 576px) {
+  .jobs,
+  .schools {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
 
-  .bio,
-  .jobs {
+  .bio {
     flex-direction: row;
   }
 }
@@ -282,7 +302,8 @@ main .icons a:hover {
   font-size: 1.5rem;
 }
 
-.about-info .job {
+.about-info .job,
+.about-info .school {
   background: #2d2d2d;
   padding: 0.5rem;
   border-bottom: #1a87ee 5px solid;
