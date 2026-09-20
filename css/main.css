@@ -209,6 +209,19 @@ header {
   width: 100%;
 }
 
+.download-resume {
+  text-decoration: underline;
+}
+
+.favorite-recent-book {
+  display: block;
+}
+
+.favorite-recent-book-title {
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .exp-cards {
   margin: 2rem 0 1rem;
   text-align: center;
@@ -222,6 +235,17 @@ header {
 
 .text-secondary {
   color: #1a87ee;
+}
+
+.current-role {
+  border: 5px solid #1a87ee;
+  grid-column: span 2;
+}
+
+@media (min-width: 992px) {
+  .current-role {
+    text-align: center;
+  }
 }
 
 main {
@@ -255,10 +279,6 @@ main .icons a:hover {
   flex-direction: column;
 }
 
-.bio {
-  column-gap: 3rem;
-}
-
 .jobs,
 .schools {
   row-gap: 2rem;
@@ -276,6 +296,7 @@ main .icons a:hover {
 @media (min-width: 768px) {
 
   .bio {
+    column-gap: 3rem;
     flex-direction: row;
   }
 }
